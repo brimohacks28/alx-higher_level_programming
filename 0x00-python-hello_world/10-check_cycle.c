@@ -1,6 +1,6 @@
 /*
  * File: 10-check_cycle.c
- * Auth: Brennan D Baraban
+ * Auth: Brian maema kyalo
  */
 
 #include <stdlib.h>
@@ -8,7 +8,7 @@
 
 /**
  * check_cycle - Checks if a singly-linked list contains a cycle.
- * @list: A singly-linked list.
+ * @list: A singly-linked list representation.
  *
  * Return: If there is no cycle - 0.
  *         If there is a cycle - 1.
