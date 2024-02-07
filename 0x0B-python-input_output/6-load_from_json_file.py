@@ -1,16 +1,9 @@
 #!/usr/bin/python3
-"""Module containing the function load_from_json_file"""
+"""saves object as json string dump"""
 import json
 
 
-def load_from_json_file(filename):
-    """Creates an Object from a “JSON file”.
-
-    Args:
-        filename (str): name of the file.
-
-    Returns:
-        object: object.
-    """
-    with open(filename, 'r', encoding="utf-8") as f:
-        return json.load(f)
+def save_to_json_file(my_obj, filename):
+    """actually does it"""
+    with open(filename, mode='w', encoding='utf-8') as f:
+        f.write(json.dumps(my_obj))
