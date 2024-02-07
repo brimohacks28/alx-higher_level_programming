@@ -1,15 +1,32 @@
+#!/usr/bin/python3
+"""Module defining the class Student"""
 
-ads adds saves json to file"""
-import json
-import sys
-save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
-try:
-    jsonList = load_from_json_file("add_item.json")
-except:
-    jsonList = []
+class Student:
+    """
+    Class that defines properties of student.
 
-for i in sys.argv[1:]:
-    jsonList.append(i)
-save_to_json_file(jsonList, "add_item.json")
+    Attributes:
+        first_name (str): first name of student.
+        last_name (int): last name of student.
+        age (int): age of student.
+    """
+    def __init__(self, first_name, last_name, age):
+        """Creates new instances of Student.
+
+        Args:
+            first_name (str): first name of student.
+            last_name (int): last name of student.
+            age (int): age of student.
+        """
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self):
+        """Retrieves a dictionary representation of a Student instance.
+
+        Returns:
+            dict: dictionary representation.
+        """
+        return self.__dict__
